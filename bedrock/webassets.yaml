@@ -1,0 +1,23 @@
+directory: .
+url: /
+auto_build: False
+debug: False
+updater: timestamp
+manifest: file:_webassets/manifest  # needs to be outside static dir; period in path not allowed in appengine
+cache: _webassets/cache  # needs to be outside static dir; period in path not allowed in appengine
+bundles:
+    # js bundle
+    js-bower-bundle:
+      filters: yui_js
+      output: 'static/bundles/js-bower-bundle.%(version)s.min.js'
+      contents:
+        - static/bower_components/jquery/dist/jquery.min.js
+        - static/bower_components/bootstrap/dist/js/bootstrap.min.js
+
+    # css bundle
+    css-bower-bundle:
+      filters: yui_css
+      output: 'static/bundles/css-bower-bundle.%(version)s.min.css'
+      contents:
+        - static/bower_components/bootstrap/dist/css/bootstrap.min.css
+        - static/css/main.css

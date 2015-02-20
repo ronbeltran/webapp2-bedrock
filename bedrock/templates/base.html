@@ -9,8 +9,13 @@
 
     <title>{% block title %}{% endblock %} - Project Name</title>
 
+    {% assets "css-bower-bundle" %}
+    <link href="{{ ASSET_URL }}" rel="stylesheet">
+    {% endassets %}
+    {#
     <link href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/main.css" rel="stylesheet">
+    #}
 
     {% block extra_head_js %}
     {% endblock %}
@@ -51,8 +56,13 @@
     {% endblock %}
     </div><!-- /.container -->
 
+    {% assets "js-bower-bundle" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    {#
     <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    #}
 
     {% block extra_js %}
     {% endblock %}
