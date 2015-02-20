@@ -1,0 +1,2 @@
+*.py[cod]
+bedrock/static/bower_components
