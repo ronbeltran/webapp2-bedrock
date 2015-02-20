@@ -1,2 +1,2 @@
-from dev import *
-from common import *
+from . dev import *
+from . common import *
