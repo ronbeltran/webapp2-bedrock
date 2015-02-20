@@ -1,3 +1,5 @@
 *.py[cod]
 bedrock/static/bower_components
+bedrock/static/bundles
+bedrock/_webassets
 bedrock/lib
