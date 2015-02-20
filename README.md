@@ -4,7 +4,7 @@ Opinionated Webapp2 project template for Google App Engine
 ##To setup the project
 
     # clone the repo
-    git@github.com:ronbeltran/webapp2-bedrock.git
+    git clone git@github.com:ronbeltran/webapp2-bedrock.git
 
     # create a virtual env
     mkvirtualenv myproject
