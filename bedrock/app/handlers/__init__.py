@@ -15,4 +15,3 @@ class BaseHandler(webapp2.RequestHandler):
         assert template, 'TEMPLATE_PATH not defined'
         template = JINJA_ENV.get_template(template)
         return self.response.out.write(template.render(context))
-
