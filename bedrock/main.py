@@ -1,14 +1,8 @@
 import webapp2
 import jinja2
 
-
-JINJA_ENV = jinja2.Environment(
-    autoescape=lambda x: True,
-    extensions=['jinja2.ext.autoescape'],
-    loader=jinja2.FileSystemLoader('templates'),
-)
-
-JINJA_ENV.globals.update({'uri_for': webapp2.uri_for})
+import config
+from app.utils.jinja import JINJA_ENV
 
 
 class BaseHandler(webapp2.RequestHandler):
@@ -36,4 +30,4 @@ class HomeHandler(BaseHandler):
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', HomeHandler, 'home')
-], debug=True)
+], debug=config.DEBUG)
