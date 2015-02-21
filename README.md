@@ -16,7 +16,7 @@ Opinionated Webapp2 project template for Google App Engine
     pip install -r dev_requirements
 
     # install needed third-party modules to lib dir
-    pip install -r dev_requirements -t lib
+    pip install -r gae_requirements -t lib
 
     # run the dev server
     dev_appserver.py app.yaml
