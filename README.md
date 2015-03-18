@@ -9,7 +9,7 @@ Opinionated Webapp2 project template for Google App Engine
     # create a virtual env
     mkvirtualenv myproject
 
-    #change to project dir
+    # change to project dir
     cd webapp2-bedrock
 
     # install development requirements
